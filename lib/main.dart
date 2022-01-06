@@ -44,18 +44,18 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: IconButton(
-          icon:Icon(Icons.access_alarms),
-          color:Colors.lightGreen,
-          iconSize:100.0,
-          onPressed:(){},
+        child: Text(
+          '정은아가야!',
+          style: TextStyle(
+            fontSize: 40.0,
+            fontStyle: FontStyle.normal,
+            fontWeight: FontWeight.bold,
+            color: Colors.green,
+            letterSpacing: 4.0,
+          ),
         ),
-
       ),
-
-
-
- // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

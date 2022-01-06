@@ -44,12 +44,12 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: RaisedButton(
-            child: Text('RaisedButton'),
-            color: Colors.orange,
-            onPressed: _incrementCounter,
-
-      ),
+        child: IconButton(
+          icon:Icon(Icons.access_alarms),
+          color:Colors.lightGreen,
+          iconSize:100.0,
+          onPressed:(){},
+        ),
 
       ),
 

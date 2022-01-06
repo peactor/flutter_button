@@ -44,16 +44,7 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Text(
-          '정은아가야!',
-          style: TextStyle(
-            fontSize: 40.0,
-            fontStyle: FontStyle.normal,
-            fontWeight: FontWeight.bold,
-            color: Colors.green,
-            letterSpacing: 4.0,
-          ),
-        ),
+        child: Image.network('https://img1.daumcdn.net/thumb/R720x0/?fname=https://t1.daumcdn.net/news/201709/26/cosmopolitan/20170926150354755mlbh.jpg'),
       ),
       // This trailing comma makes auto-formatting nicer for build methods.
     );

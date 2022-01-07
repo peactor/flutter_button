@@ -44,9 +44,13 @@ class _MyHomePageState extends State<MyHomePage> {
         title: Text(widget.title),
       ),
       body: Center(
-        child: Image.network('https://img1.daumcdn.net/thumb/R720x0/?fname=https://t1.daumcdn.net/news/201709/26/cosmopolitan/20170926150354755mlbh.jpg'),
+        child:TextField(
+          decoration:InputDecoration(
+            labelText: '입력해주세요',
+          ),
+        ),
+
       ),
-      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

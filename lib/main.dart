@@ -51,10 +51,7 @@ class SecondPage extends StatelessWidget{
       body:RaisedButton(
         child: Text('이전 페이지로'),
         onPressed:(){
-          Navigator.push(
-            context,
-            MaterialPageRoute(builder: (context) => FirstPage()),
-          );
+          Navigator.pop(context);
         },
       ),
     );

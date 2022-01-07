@@ -15,41 +15,47 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.deepPurple,
       ),
-      home: const MyHomePage(title: '아가 페이지'),
+      home: FirstPage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-  final String title;
 
+class FirstPage extends StatelessWidget{
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context){
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
+        title:Text('First'),
       ),
-      body: Center(
-        child:TextField(
-          decoration:InputDecoration(
-            labelText: '입력해주세요',
-          ),
-        ),
+      body:RaisedButton(
+        child:Text('다음 페이지로'),
+        onPressed: (){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => SecondPage()),
+          );
+        },
+      ),
+    );
+  }
+}
 
+class SecondPage extends StatelessWidget{
+  @override
+  Widget build(BuildContext context){
+    return Scaffold(
+      appBar:AppBar(
+        title:Text('Second'),
+      ),
+      body:RaisedButton(
+        child: Text('이전 페이지로'),
+        onPressed:(){
+          Navigator.push(
+            context,
+            MaterialPageRoute(builder: (context) => FirstPage()),
+          );
+        },
       ),
     );
   }
